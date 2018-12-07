@@ -4,9 +4,6 @@ jobs:
   build:
     docker:
       - image: circleci/node:8
-    environment:
-      REACT_APP_TESTMESS: ${REACT_APP_TESTMESS}
-      REACT_APP_TESTMES: ${REACT_APP_TESTMES}
     steps:
       - checkout
       - run: 
@@ -18,6 +15,9 @@ jobs:
           name: start
           command: |
             npm run build
+          environment:
+            REACT_APP_TESTMESS: ${REACT_APP_TESTMESS}
+            REACT_APP_TESTMES: ${REACT_APP_TESTMES}
 
       - run: 
           name: deploy
