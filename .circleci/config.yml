@@ -8,6 +8,9 @@ jobs:
       REACT_APP_TESTMESS: $REACT_APP_TESTMESS
       REACT_APP_TESTMES: ${REACT_APP_TESTMES}
     steps:
-      - run: npm start
+      - run: 
+        name: test
+        command: |
+          npm start
 
 
