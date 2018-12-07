@@ -7,8 +7,8 @@ jobs:
     environment:
       REACT_APP_TESTMESS: ${REACT_APP_TESTMESS}
       REACT_APP_TESTMES: ${REACT_APP_TESTMES}
-    working_directory: ~/project
     steps:
+      - checkout
       - run: 
           name: install
           command: |
