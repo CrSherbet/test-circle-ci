@@ -1,0 +1,13 @@
+
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:7.10
+    environment:
+      REACT_APP_TESTMESS: $REACT_APP_TESTMESS
+      REACT_APP_TESTMES: ${REACT_APP_TESTMES}
+    steps:
+      - run: npm start
+
+
