@@ -9,11 +9,11 @@ jobs:
       REACT_APP_TESTMES: ${REACT_APP_TESTMES}
     steps:
       - run: 
-        name: install
-        command: |
-          npm install
+          name: install
+          command: |
+            npm install
           
       - run: 
-        name: install
-        command: |
-          npm start
+          name: start
+          command: |
+            npm start
