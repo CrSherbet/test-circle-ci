@@ -12,8 +12,9 @@ jobs:
           name: install
           command: |
             npm install
+             echo $REACT_APP_TESTMESS
           
       - run: 
           name: start
           command: |
-            npm start
+            echo "$REACT_APP_TESTMESS"
