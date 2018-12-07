@@ -11,7 +11,7 @@ jobs:
       - run: 
         name: test
         command: |
-          echo $REACT_APP_TESTMESS
-          echo ${REACT_APP_TESTMES}
+          npm install
+          npm start
 
 
