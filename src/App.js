@@ -17,7 +17,8 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            {process.env.REACT_APP_TESTMESS}
+            {process.env.REACT_APP_TESTMES}
           </a>
         </header>
       </div>
