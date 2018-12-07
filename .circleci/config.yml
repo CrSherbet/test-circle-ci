@@ -14,11 +14,10 @@ jobs:
       - run: 
           name: start
           command: |
+            echo 'export REACT_APP_TESTMESS="$REACT_APP_TESTMESS"' >> $BASH_ENV
+            echo 'export REACT_APP_TESTMES="$REACT_APP_TESTMES"' >> $BASH_ENV
             npm run build
-          environment:
-            REACT_APP_TESTMESS: <%= ENV['REACT_APP_TESTMESS'] %>
-            REACT_APP_TESTMES: <%= ENV['REACT_APP_TESTMES'] %>
-
+          
       - run: 
           name: deploy
           command: |
