@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/node:8
     environment:
       REACT_APP_TESTMESS: ${REACT_APP_TESTMESS}
       REACT_APP_TESTMES: ${REACT_APP_TESTMES}
@@ -12,11 +12,13 @@ jobs:
           name: install
           command: |
             npm install
-            echo ${REACT_APP_TESTMES}
-          environment:
-            REACT_APP_TESTMESS: $REACT_APP_TESTMES
           
       - run: 
           name: start
           command: |
-            echo "$REACT_APP_TESTMESS"
+            npm run build
+
+      - run: 
+          name: deploy
+          command: |
+            firebase deploy

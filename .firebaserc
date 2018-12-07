@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "dev": "test-circle-ci",
+    "default": "test-circle-ci"
+  }
+}
