@@ -24,5 +24,4 @@ jobs:
           command: |
             sudo yarn global add firebase-tools
             firebase use --token ${FIREBASE_TOKEN}
-            firebase use --add ${PROJECT_ID_DEV}
             firebase deploy
